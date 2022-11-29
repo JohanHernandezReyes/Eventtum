@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>EVENTTUM</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/logo.png">
+    <link type="text/css" href="./css/estilos.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/Funciones.js"></script>
+    <script type="text/javascript" src="./js/encrypt.js"></script>
+</head>
+ 
+<body>
+    
+    <div class="containerdos">
+        <div class="container__formdos">
+           <img src="./img/logo 2.png" alt="esto es una imagen del logo">
+           <h2 id="h2registro2">Información complementaria</h2>
+        
+            <form id="formregistro2">
+               <label for="tipoID" style="font-size:18px">Tipo ID:</label>
+               <select id="tipoID" style="width:75%;font-size:18px;background-color: gray; color: white">
+                <option value="">Seleccione un tipo de ID</option>
+                <option value=1>N.I.T.</option>
+                <option value=2>Cédula de Ciudadanía</option>
+                <option value=3>Cédula de Extranjería</option>
+               </select><br>
+               <input id="NIT" type="text" placeholder="Identificación">
+               <br>
+               <label for="ciudad"  style="font-size:18px">Ciudad:</label>
+               <select id="ciudad" style="width:75%;font-size:18px;background-color: gray; color: white">
+                <option value="">Seleccione la ciudad</option>
+                <option value=1>Bogotá D.C.</option>
+                <option value=2>Medellín</option>
+                <option value=3>Cali</option>
+                <option value=4>Barranquilla</option>
+               </select><br>
+               <input id="direcc" type="text" placeholder="Dirección">
+               <input id="tel" type="text" placeholder="Teléfono">
+               <input type="button" id="btngcl" class="botondos" onclick="guardarcliente()" value="Registrarse">
+            </form>
+            <br><br><br>
+            <a id="linksign2" href="index.html" hidden="true">Se ha registrado con éxito. Ahora puede ingresar</a>
+        </div>
+   
+    </div>
+ 
+</body>
+ 
+</html>

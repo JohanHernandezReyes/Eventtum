@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>EVENTTUM</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/logo.png">
+    <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/Funciones.js"></script>
+    <script type="text/javascript" src="./js/encrypt.js"></script>
+</head>
+ 
+<body>
+    
+    <div class="containerdos">
+        <div class="container__formdos">
+           <img src="./img/logo 2.png" alt="esto es una imagen del logo">
+           <h2 id="h2registro">Registrese para acceder</h2>
+        
+            <form id="formregistro">
+               <input id="name" type="text" placeholder="Nombre o Razon Social" value="">
+               <input id="email" type="email" placeholder="Email" value="" required>
+               <input id="password" type="password" placeholder="Contraseña" value="" minlength="8" maxlength="12" required title="La contraseña debe tener entre 8 y 12 caracteres">
+               <input id="confirm" type="password" placeholder="Confirme su contraseña" value="" minlength="8" maxlength="12" required title="La contraseña debe tener entre 8 y 12 caracteres">              
+               <input type="button" id="btngusu" class="botondos" onclick="guardarUsuario()" value="Registrarse">
+               <a id="linksign" href="index.html">¿Ya tienes una cuenta? Inicia Sesión </a>
+            </form>
+            <br><br><br>
+            <a id="linkdatoscliente" href="infocliente.html" hidden="true">Complete su registro como cliente</a>
+            <br><br><br>
+            <a id="linksign3" href="index.html" hidden="true">No por ahora. Solo iniciar sesión</a>
+        </div>
+        
+    </div>
+ 
+</body>
+ 
+</html>

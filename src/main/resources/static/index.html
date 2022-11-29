@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>EVENTTUM</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/logo.png">
+    <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/Funciones.js"></script>
+    <script type="text/javascript" src="./js/encrypt.js"></script>
+</head>
+ 
+<body>
+    
+    <div class="container">
+        <div class="container__form">
+           <img src="./img/logo 2.png" alt="esto es una imagen del logo">
+           <h2 id="titulologin">Iniciar sesión</h2>
+            
+            <form id="formlogin">
+               <input id="uemail" type="email" placeholder="Usuario (Email)" required>
+               <input id="upassword" type="password" placeholder="Contraseña" minlength="8" maxlength="12" title="La contraseña debe tener entre 8 y 12 caracteres">
+               <input class="chek" type="checkbox" id="checkid">
+               <label for="checkid">Recuerdame</label>
+               <a id="reglink" href="registro.html">Registrese Aquí</a>
+               <input type="button" id="btnlog" class="boton" onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
+            </form>
+            <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>        
+        </div>
+    </div>
+    
+</body>
+ 
+</html>
