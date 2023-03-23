@@ -4,6 +4,7 @@ package Eventtum.Modelo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 
@@ -47,5 +48,12 @@ public class Clientes implements Serializable{
     @JsonIgnoreProperties("clientestip")
     private Tipoid tbltipoid;
     
+    @OneToMany(cascade={CascadeType.PERSIST},mappedBy="tblclientes")
+    @JsonIgnoreProperties("tblclientes")
+    public List<Pedidos> reservascliente;
+    
+    @OneToMany(cascade={CascadeType.PERSIST},mappedBy="tblclientes")
+    @JsonIgnoreProperties("tblclientes")
+    public List<PQRS> pqrscliente;
  
 }

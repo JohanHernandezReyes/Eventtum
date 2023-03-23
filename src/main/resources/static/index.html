@@ -8,27 +8,142 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="./js/Funciones.js"></script>
     <script type="text/javascript" src="./js/encrypt.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/39f02fa58f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
  
-<body>
-    
+<body onload="mostrarnavbar();">
+    <div id="navbar"></div>
+ 
+    <section class="first_seccion">
+        <div>
+            <h1 style="text-align: center;"><b>Bienvenido a <span style="color: gold;">EVENTTUM</span></b><h1>
+            <p style="text-align: center;">Un lugar magico que te llevara a sentir diferentes emociones, disfruta de nuestras locaciones.Lugares exclusivos, para personas únicas</p>
+            <div class="jumbotron slider">    
+                <ul>
+                    <li><img src="img/piscina.jpg" alt=""></li>
+                    <li><img src="img/salon amarillo.jpeg" alt=""></li>
+                    <li><img src="img/salon cielo estrellado.jpeg" alt=""></li>
+                    <li><img src="img/salon violeta.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+   
+    <div class="jumbotron text-center">
+        <div>
+            <h1 style="text-align: center;">Lo que dicen nuestros clientes: </h1>
+            <img style="height: 500%;" src="img/portada-foto-perfil-redes-sociales-consejos.jpg" alt="">
+        </div>
+   
+        <div class="slider">
+            <ul>
+                <li>
+                    <div class="name-user">
+                        <strong>Andres lozano</strong>
+                        <span>@lozano</span>
+                    </div>
+                    <div class="reseñas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="customer-comments">
+                        <p>Un lugar de ensueño, especial y unico. </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="name-user">
+                        <strong>Xiomara García</strong>
+                        <span>@xiomy</span>
+                    </div>
+                    <div class="reseñas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="customer-comments">
+                        <p>Simplemente unico, super en todo</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="name-user">
+                        <strong>Fernando Cubillos</strong>
+                        <span>@aretes</span>
+                    </div>
+                    <div class="reseñas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="customer-comments">
+                        <p>La atencion fue excelente, el ambiente ideal</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="name-user">
+                        <strong>Johan Hernandez</strong>
+                        <span>@ElBarbas</span>
+                    </div>
+                    <div class="reseñas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="customer-comments">
+                        <p>El lugar cumplio con mis espectativas</p>
+                    </div>
+                </li>
+            </ul>    
+        </div>     
+    </div>        
+    <div class="jumbotron">
     <div class="container">
         <div class="container__form">
-           <img src="./img/logo 2.png" alt="esto es una imagen del logo">
-           <h2 id="titulologin">Iniciar sesión</h2>
-            
+            <h2 id="titulologin" style="color:gold">Iniciar sesión</h2>
+            <img src="./img/logo 2.png">
             <form id="formlogin">
-               <input id="uemail" type="email" placeholder="Usuario (Email)" required>
-               <input id="upassword" type="password" placeholder="Contraseña" minlength="8" maxlength="12" title="La contraseña debe tener entre 8 y 12 caracteres">
-               <input class="chek" type="checkbox" id="checkid">
-               <label for="checkid">Recuerdame</label>
-               <a id="reglink" href="registro.html">Registrese Aquí</a>
-               <input type="button" id="btnlog" class="boton" onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
+                <i class="fa-solid fa-user" style="color:white"></i>
+                <label for="uemail">Usuario:</label>
+                <input id="uemail" type="email" placeholder="Ingresa tu usuario (Email)" required>
+                <br>
+                <i class="fa-solid fa-lock" style="color:white"></i>
+                <label for="upassword">Contraseña:</label>
+                <input id="upassword" type="password" placeholder="Tu contraseña" minlength="8" maxlength="12"
+                    title="La contraseña debe tener entre 8 y 12 caracteres">
+                <br>    
+                <input class="chek" type="checkbox" id="checkid">
+                <label for="checkid">Recuerdame</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n
+                <a id="reglink" href="registro.html" style="font-size: 20px;">Registrese Aquí</a>
+                <input type="button" id="btnlog" class="boton"
+                    onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
             </form>
-            <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>        
+            <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>
         </div>
     </div>
-    
+    </div>
+    <div id="footer"></div>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html")
+        }
+        )
+    </script>  
+
 </body>
- 
+
 </html>

@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>EVENTTUM</title>
+    <title>Registro</title>
     <meta charset="utf-8">
     <link rel="icon" href="./img/logo.png">
-    <link type="text/css" href="./css/estilos.css" rel="stylesheet" />
+    <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="./js/Funciones.js"></script>
     <script type="text/javascript" src="./js/encrypt.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/39f02fa58f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
  
 <body>
+    <div id="navbar"></div>
+    <script>
+        $(function(){
+            $("#navbar").load("navbar.html")
+        }
+        )
+    </script> 
     
+    <div class="jumbotron" style="background:rgba(172, 177, 29, 0.736);">
     <div class="containerdos">
         <div class="container__formdos">
            <img src="./img/logo 2.png" alt="esto es una imagen del logo">
@@ -42,9 +57,16 @@
             <br><br><br>
             <a id="linksign2" href="index.html" hidden="true">Se ha registrado con éxito. Ahora puede ingresar</a>
         </div>
-   
     </div>
- 
+    </div>
+    
+    <div id="footer"></div>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html")
+        }
+        )
+    </script>  
 </body>
  
 </html>

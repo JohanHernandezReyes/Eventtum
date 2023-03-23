@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/logo.png">
+    <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/Funciones.js"></script>
+    <script type="text/javascript" src="./js/encrypt.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/39f02fa58f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</head>
+ 
+<body onload="setfocus('uemail');">
+    <div id="navbar"></div>
+    <script>
+        $(function(){
+            $("#navbar").load("navbar.html")
+        }
+        )
+    </script> 
+    <div class="jumbotron" style="background:rgba(172, 177, 29, 0.736);">
+    <div class="container">
+        <img style="height:500px; width: 500px;" src="img/login.png" alt="">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <div class="container__form">
+            <h2 id="titulologin" style="color:gold">Iniciar sesión</h2>
+            <img src="./img/logo 2.png">
+            <form id="formlogin">
+                <i class="fa-solid fa-user" style="color:white"></i>
+                <label for="uemail">Usuario:</label>
+                <input id="uemail" type="email" placeholder="Ingresa tu usuario (Email)" pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" required focus>
+                <br>
+                <i class="fa-solid fa-lock" style="color:white"></i>
+                <label for="upassword">Contraseña:</label>
+                <input id="upassword" type="password" placeholder="Tu contraseña" minlength="8" maxlength="12"
+                    title="La contraseña debe tener entre 8 y 12 caracteres">
+                <br>    
+                <input class="chek" type="checkbox" id="checkid">
+                <label for="checkid">Recuerdame</label>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n
+                <a id="reglink" href="registro.html" style="font-size: 20px;">Registrese Aquí</a>
+                <input type="button" id="btnlog" class="boton"
+                    onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
+            </form>
+            <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>
+        </div>
+    </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html")
+        }
+        )
+    </script>  
+
+</body>
+
+</html>

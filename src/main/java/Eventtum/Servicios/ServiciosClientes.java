@@ -1,6 +1,7 @@
 package Eventtum.Servicios;
 
 import Eventtum.Modelo.Clientes;
+import Eventtum.Modelo.Usuarios;
 import Eventtum.Repositorio.RepositorioClientes;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class ServiciosClientes {
         return false;  
     }
     
+    public Optional<Clientes> BuscarPorUsuario(Usuarios U){
+        return (Optional<Clientes>) ClientesRepositorio.BuscarPorUsuario(U);
+    }
     
     public Clientes GuardarCliente(Clientes C){
         if (C.getIdCliente()==null){
