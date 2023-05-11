@@ -354,12 +354,33 @@ function MostrarLocaciones(){
     });
 }
 
+function validarfechareserva(fecha, msj_error) {
+
+    var diaminreserva = new Date();
+    diaminreserva.setDate(diaminreserva.getDate()+1)
+    diaminreserva.setSeconds(0)
+    diaminreserva.setMinutes(0)
+    diaminreserva.setHours(0)
+    console.log(diaminreserva)
+    console.log(fecha)
+    if (fecha < diaminreserva) {
+        Swal.fire({
+            icon: 'error',
+            title: "Advertencia",
+            text: msj_error
+        });
+        throw 'exit';
+    }
+}
+
 
 function guardarreserva(){
     validarvacio($("#date").val(), "Debe ingresar una fecha para la reserva");
     validarvacio($("#time").val(), "Debe ingresar una hora para la reserva");
     validarvacio($("#guests").val(), "Por favor ingrese un numero de personas");
     validarvacio($("#locacion").val(), "Por favor elija una locación para el evento");
+
+    validarfechareserva(horalocal(new Date($("#date").val()), "suma").setSeconds(1), "Debe ingresar una fecha posterior a la fecha actual")
 
     var fechapedido=horalocal(new Date()).toISOString(); 
     var fechareserva=horalocal(new Date($("#date").val()), "suma").toISOString(); 
