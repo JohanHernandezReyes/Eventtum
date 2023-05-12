@@ -19,11 +19,41 @@
  
 <body onload="mostrarnavbar();">
     <div id="navbar"></div>
- 
+    <div class="jumbotron">
+        <div class="container">
+            <div class="left_section">
+                <h2 style="text-align: center;"><b>Bienvenido a <span style="color: gold;">EVENTTUM</span></b><h2>
+                <p style="text-align: center;">Un lugar magico que te llevara a sentir diferentes emociones, disfruta de nuestras locaciones.Lugares exclusivos, para personas únicas</p>
+            </div>
+            <div class="container__form">
+                <h2 id="titulologin" style="color:gold"><img class = "logo-login" src="./img/logo.png">Iniciar sesión</h2>
+                
+                <form id="formlogin">
+                    <i class="fa-solid fa-user" style="color:white"></i>
+                    <label for="uemail">Usuario:</label>
+                    <input id="uemail" type="email" placeholder="Ingresa tu usuario (Email)" required>
+                    <br>
+                    <i class="fa-solid fa-lock" style="color:white"></i>
+                    <label for="upassword">Contraseña:</label>
+                    <input id="upassword" type="password" placeholder="Tu contraseña" minlength="8" maxlength="12"
+                        title="La contraseña debe tener entre 8 y 12 caracteres">
+                    <br>    
+                    <input class="chek" type="checkbox" id="checkid">
+                    <label for="checkid">Recuerdame</label>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n
+                    <a id="reglink" href="registro.html" style="font-size: 20px;">Registrese Aquí</a>
+                    <input type="button" id="btnlog" class="boton"
+                        onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
+                </form>
+                <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>
+            </div>
+        </div>
+        </div>
     <section class="first_seccion">
         <div>
-            <h1 style="text-align: center;"><b>Bienvenido a <span style="color: gold;">EVENTTUM</span></b><h1>
-            <p style="text-align: center;">Un lugar magico que te llevara a sentir diferentes emociones, disfruta de nuestras locaciones.Lugares exclusivos, para personas únicas</p>
+            
+
+            
             <div class="jumbotron slider">    
                 <ul>
                     <li><img src="img/piscina.jpg" alt=""></li>
@@ -35,12 +65,64 @@
         </div>
     </section>
    
+   
+    <section class="card">
+        <div class="body-card">
+            <div class="picture-1">
+                <img src="img/salon amarillo.jpeg" alt="">
+            </div>
+            <div class="description">
+                <b>Salón Amarillo</b><br>
+                <span style="color: white;">Medidas: 20mts x 20mts</span><br>
+                <span style="color: white;">Precio: $ 1.000.000 dia</span><br>
+                <br>
+                <a href="reserva.html">Reservar</a>
+            </div>
+        </div>
+        <div class="body-card">
+            <div class="picture-2">
+                <img src="img/salon azul.jpg" alt="">
+            </div>
+            <div class="description">
+                <b>Salón Azul</b><br>
+                <span style="color: white;">Medidas: 15mts x 20mts</span><br>
+                <span style="color: white;">Precio: $ 600.000 dia</span><br>
+                <br>
+                <a href="reserva.html">Reservar</a>
+            </div>
+        </div>
+        <div class="body-card">
+            <div id="picture-3">
+                <img src="img/salon morado.jpg" alt="">
+            </div>
+            <div class="description">
+                <b>Salón Morado</b><br>
+                <span style="color: white;">Medidas: 10mts x 10mts</span><br>
+                <span style="color: white;">Precio: $ 800.000 dia</span><br>
+                <br>
+                <a href="reserva.html">Reservar</a>
+            </div>
+        </div>
+        <div class="body-card">
+            <div class="picture-4">
+                <img src="img/salon cielo estrellado.jpeg" alt="">
+            </div>
+            <div class="description">
+                <b>Salón Verde</b><br>
+                <span style="color: white;">Medidas: 30mts x 30mts</span><br>
+                <span style="color: white;">Precio: $ 1.000.000 dia</span><br>
+                <br>
+                <a href="reserva.html">Reservar</a>
+            </div>
+        </div>
+    </section>
+   
     <div class="jumbotron text-center">
         <div>
             <h1 style="text-align: center;">Lo que dicen nuestros clientes: </h1>
             <img style="height: 500%;" src="img/portada-foto-perfil-redes-sociales-consejos.jpg" alt="">
         </div>
-   
+        
         <div class="slider">
             <ul>
                 <li>
@@ -110,32 +192,7 @@
             </ul>    
         </div>     
     </div>        
-    <div class="jumbotron">
-    <div class="container">
-        <div class="container__form">
-            <h2 id="titulologin" style="color:gold">Iniciar sesión</h2>
-            <img src="./img/logo 2.png">
-            <form id="formlogin">
-                <i class="fa-solid fa-user" style="color:white"></i>
-                <label for="uemail">Usuario:</label>
-                <input id="uemail" type="email" placeholder="Ingresa tu usuario (Email)" required>
-                <br>
-                <i class="fa-solid fa-lock" style="color:white"></i>
-                <label for="upassword">Contraseña:</label>
-                <input id="upassword" type="password" placeholder="Tu contraseña" minlength="8" maxlength="12"
-                    title="La contraseña debe tener entre 8 y 12 caracteres">
-                <br>    
-                <input class="chek" type="checkbox" id="checkid">
-                <label for="checkid">Recuerdame</label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n
-                <a id="reglink" href="registro.html" style="font-size: 20px;">Registrese Aquí</a>
-                <input type="button" id="btnlog" class="boton"
-                    onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
-            </form>
-            <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>
-        </div>
-    </div>
-    </div>
+    
     <div id="footer"></div>
     <script>
         $(function(){

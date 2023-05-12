@@ -30,8 +30,7 @@
         <img style="height:500px; width: 500px;" src="img/login.png" alt="">
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <div class="container__form">
-            <h2 id="titulologin" style="color:gold">Iniciar sesión</h2>
-            <img src="./img/logo 2.png">
+            <h2 id="titulologin" style="color:gold"><img class = "logo-login" src="./img/logo.png">Iniciar sesión</h2>
             <form id="formlogin">
                 <i class="fa-solid fa-user" style="color:white"></i>
                 <label for="uemail">Usuario:</label>
@@ -45,13 +44,19 @@
                 <input class="chek" type="checkbox" id="checkid">
                 <label for="checkid">Recuerdame</label>
                 &nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n
-                <a id="reglink" href="registro.html" style="font-size: 20px;">Registrese Aquí</a>
+                <a id="reglink" href="registro.html">Registrese Aquí</a>
                 <input type="button" id="btnlog" class="boton"
                     onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
             </form>
             <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>
         </div>
     </div>
+    <div class="social-networt">
+        <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div> 
     </div>
     <div id="footer"></div>
     <script>
