@@ -30,7 +30,8 @@ body{
 }
 
 .left_section{
-    width: 40%;
+    width: 50%;
+    text-align: left;
 }
 
 img{
