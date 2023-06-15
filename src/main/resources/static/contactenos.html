@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <title>Contactenos</title>
+    <meta charset="UTF-8">
     <link rel="icon" href="./img/logo.png">
-    <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/Funciones.js"></script>
-    <script type="text/javascript" src="./js/encrypt.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/39f02fa58f.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/Funciones.js"></script>
+    <script type="text/javascript" src="./js/encrypt.js"></script>
+    <title>Contactenos</title>
 </head>
 
 <body onload="mostrarnavbar(), MostrarLocaciones(),  validarlogin();">
+
+    <div id="particles-js"></div>
     <div id="navbar"></div>
-    
-    <div class="jumbotron" style="background:rgba(172, 177, 29, 0.736);">
-        <div class="container">
-            <div>
-                <h3><b>Déjanos tu mensaje, y nos comunicaremos contigo</b></h3>
-                <br><br>
-                <u><p><b>Encuéntranos en:</b></p></u>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Calle Falsa, # 1 -23. Bogotá, CO.</p>
-                <p><span class="glyphicon glyphicon-phone"></span>  +57 311 2345667</p>
-                <p><span class="glyphicon glyphicon-envelope"></span>  info@eventtum.com.co</p>
-            </div>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <div class="container__form">
 
-                <h2 id="h2registro" style="color:gold; text-align: center;" ><img class = "logo-login" src="./img/logo.png">Contáctenos</h2>
-                <form class="formulario-contacto"action="#" method="post">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                    <br>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" required>
-                    <br>
-                    <label for="tipopqrs">Tipo de solicitud:</label>
-                    <select id="tipopqrs" style="width:100%;font-size:18px;background-color: gray; color: white">
-                        <option value="">Seleccione una opción</option>
-                        <option value="p">Petición</option>
-                        <option value="q">Queja</option>
-                        <option value="r">Reclamo</option>
-                        <option value="s">Solicitud</option>
-                    </select><br><br>
-                    <label for="locacion">Locación:</label>
-                    <select id="locacion" style="width:100%;font-size:18px;background-color: gray; color: white">
-                        <option value="">No Aplica</option>
-                    </select><br><br>
-                    <label for="message">Mensaje:</label><br>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <input type="button" id="btnmsg" class="botondos" onclick="guardarmsjpqrs()" value="Enviar mensaje">
-                </form>
-            </div>
+    <div class="container-contacto">
+        <div class="info-form">
+            <h2>Contactenos</h2>
+            <p>Déjanos un mensaje tu mensaje y nos pondremos en contacto contigo</p>
+            <a href="#"><i class="fa-solid fa-phone">
+                </i>+57 311 2345667</a>
+            <a href="#"><i class="fa-sharp fa-solid fa-envelope">
+                </i>info@eventtum.com.co</a>
+            <a href="#"><i class="fa-solid fa-map-location-dot">
+                </i>Calle Falsa, # 1 -23. Bogotá, CO.</a>x
         </div>
+        <form action="#" autocomplete="off">
+            <input type="text" name="nombre" id="name" placeholder="Ingresa tu nombre" class="campo">
+            <input type="email" name="email" id="email" placeholder="Ingresa tu correo" class="campo" pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" required>
+            <label for="tipopqrs">Tipo de solicitud:</label>
+            <select id="tipopqrs" class="campo">
+                <option value="">Seleccione una opción</option>
+                <option value="p">Petición</option>
+                <option value="q">Queja</option>
+                <option value="r">Reclamo</option>
+                <option value="s">Solicitud</option>
+            </select><br><br>
+            <label for="locacion">Locación:</label>
+            <select id="locacion" class="campo">
+                <option value="">No Aplica</option>
+            </select><br><br>
+            <textarea name="Mensaje:" id="message" placeholder="Ingresa tu mensaje">
+            </textarea>
+            <input type="submit" id="btnmsg" name="Enviar" value="Enviar mensaje" class="btn-enviar" onclick="guardarmsjpqrs()">
+        </form>
     </div>
+    <section class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127255.90752143037!2d-74.21039815664065!3d4.639141400000009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3081295ccb%3A0xd4347f67e96f6d8b!2sSENA%20CGMLTI!5e0!3m2!1ses!2sco!4v1686108610107!5m2!1ses!2sco"
+            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
 
     <div id="footer"></div>
     <script>
-        $(function(){
+        $(function () {
             $("#footer").load("footer.html")
         }
         )
     </script>
 
-</body> 
+
+    <!--seccion particulas-->
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
 </html>

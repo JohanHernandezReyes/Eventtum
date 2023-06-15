@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Locaciones</title>
     <link rel="icon" href="./img/logo.png">
     <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
@@ -10,6 +11,7 @@
     <script type="text/javascript" src="./js/encrypt.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/39f02fa58f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -17,31 +19,102 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
 <body onload="mostrarnavbar()">
+
+    <div id="particles-js"></div>
+
     <div id="navbar"></div>
 
     <h1 style="text-align: center;"><b>Galeria de Nuestras Locaciones</b></h1>
     <br><br>
-    <div class="jumbotron slider">
-        <ul>
-            <li><img src="img/piscina.jpg" onclick="cambiarimg('img/piscina.jpg')"></li>
-            <li><img src="img/salon amarillo.jpeg" onclick="cambiarimg('img/salon amarillo.jpeg')"></li>
-            <li><img src="img/salon azul.jpg" onclick="cambiarimg('img/salon azul.jpg')"></li>
-            <li><img src="img/salon blanco.jpg" onclick="cambiarimg('img/salon blanco.jpg')"></li>
-            <li><img src="img/casa de piedra.jpeg" onclick="cambiarimg('img/casa de piedra.jpeg')"></li>
-            <li><img src="img/salon cielo estrellado.jpeg" onclick="cambiarimg('img/salon cielo estrellado.jpeg')"></li>
-            <li><img src="img/salon morado.jpg" onclick="cambiarimg('img/salon morado.jpg')"></li>
-            <li><img src="img/salon violeta.jpg" onclick="cambiarimg('img/salon violeta.jpg')"></li>
-        </ul>    
-    </div>    
 
-    <div class="container">
-        <article class="light-box">
-            <u><h2 style="text-align: center;"><b><span id="nombreloc"></span></b></h2></u>
-            <img id="image1" style="height: 600px;width: 1000px;">
+    <section class="tarjetas">
+        <div class="cards">
+            <div class="face front">
+                <img src="./img/salon amarillo.jpeg" alt="">
+                <h3 align="center">Salón Amarillo</h3>
+            </div>
+            <div class="face back">
+                <h3 style="color: yellow;"><a href="#img_container" onclick="cambiarimg('img/salon amarillo.jpeg')">Salón Amarillo</a></h3>
+                <p>Elegancia y sofisticación se fusionan en este espacioso salón con moderna decoración y servicios exclusivos. Ideal para eventos corporativos y galas.</p>
+                <div class="link-cards">
+                    <a href="registro.html">Reservar</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="face front">
+                <img src="./img/salon azul.jpg" alt="">
+                <h3 align="center">Salón Azul</h3>
+            </div>
+            <div class="face back">
+                <h3><span style="color: blue;"><a href="#img_container" onclick="cambiarimg('img/salon azul.jpg')">Salón Azul</a></span></h3>
+                <p>Con una decoración opulenta y detalles de lujo, este salón deslumbrante es perfecto para eventos de alto nivel, como fiestas de cumpleaños y aniversarios.</p>
+                <div class="link-cards">
+                    <a href="registro.html">Reservar</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="face front">
+                <img src="./img/salon blanco.jpg" alt="">
+                <h3 align="center">Salón Blanco</h3>
+            </div>
+            <div class="face back">
+                <h3><a href="#img_container" onclick="cambiarimg('img/salon blanco.jpg')">Salón Blanco</a></h3>
+                <p>Con un estilo vanguardista y una atmósfera moderna, este salón versátil es perfecto para conferencias, lanzamientos de productos y eventos corporativos innovadores.</p>
+                <div class="link-cards">
+                    <a href="registro.html">Reservar</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="face front">
+                <img src="./img/salon cielo estrellado.jpeg" alt="">
+                <h3 align="center">Salón Cielo Estrellado</h3>
+            </div>
+            <div class="face back">
+                <h3><span style="color: turquoise;"><a href="#img_container" onclick="cambiarimg('img/salon cielo estrellado.jpeg')">Salón Cielo Estrellado</a></span></h3>
+                <p>Rodeado de exuberante vegetación, este encantador salón al aire libre brinda un ambiente natural y relajado para bodas y celebraciones al aire libre.</p>
+                <div class="link-cards">
+                    <a href="registro.html">Reservar</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="face front">
+                <img src="./img/salon morado.jpg" alt="">
+                <h3 align="center">Salón Morado</h3>
+            </div>
+            <div class="face back">
+                <h3><span style="color: blueviolet;"><a href="#img_container" onclick="cambiarimg('img/salon morado.jpg')">Salón Morado</a></span></h3>
+                <p>Diseñado para eventos más pequeños y acogedores, este salón íntimo ofrece un ambiente cálido y elegante, ideal para reuniones familiares y eventos sociales.</p>
+                <div class="link-cards">
+                    <a href="registro.html">Reservar</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="face front">
+                <img src="./img/salon violeta.jpg" alt="">
+                <h3 align="center">Salón Violeta</h3>
+            </div>
+            <div class="face back">
+                <h3><span style="color: violet;"><a href="#img_container" onclick="cambiarimg('img/salon violeta.jpg')">Salón Violeta</a></span></h3>
+                <p>Sumérgete en la elegancia y la intimidad de este salón de estilo comedor, decorado en tonos violeta y ambientado con un ambiente acogedor. Perfecto para cenas privadas y eventos exclusivos.</p>
+                <div class="link-cards">
+                    <a href="registro.html">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+       <div class="container" id="img_container">
+            <u><h1 style="text-align: center; color:white"><b><span id="nombreloc"></span></b></h1></u>
+            <img id="image1" src="./img/salones-para-eventos.png" style="height: 600px;width: 1000px;">
             <br>
             <h3 id="descrip_loc" style="text-align:center;"></h3>
-        </article>
-    </div>
+            
+        </div>
 
     <h2 style="color:black; text-align: center;"><a style="font-size: 30px;" href="reserva.html">Realiza tu reservación </a></h2>
 
@@ -52,5 +125,9 @@
         }
         )
     </script> 
+
+    <!--seccion particulas-->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/app.js"></script>
 </body> 
 </html>

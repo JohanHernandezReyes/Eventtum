@@ -1,10 +1,11 @@
 function validarvacio(campo, msj_vacio) {
     if (campo == "") {
-        Swal.fire({
+       Swal.fire({
             icon: 'error',
             title: "Advertencia",
             text: msj_vacio
         });
+        event.preventDefault();
         throw 'exit';
     }
 }
@@ -101,6 +102,7 @@ function NuevoUsuario() {
 }
 
 function guardarUsuario(){
+    event.preventDefault();
     Validar($("#email").val().toLowerCase(), ListaUsuarios);
     localStorage.setItem("emailnewuser", $("#email").val().toLowerCase());  
     localStorage.setItem("namenewuser", $("#name").val());  
@@ -131,6 +133,7 @@ function ValidarUsuario(email){
 
 
 function Autenticacion(email, password) {
+    event.preventDefault();
     ValidarUsuario(email);
     var hash = md5(password);
     console.log(hash); 
@@ -156,11 +159,10 @@ function Autenticacion(email, password) {
                 localStorage.setItem("nameusuariologin", respuesta.name);
                 localStorage.setItem("emailusuariologin", respuesta.email);
                 document.getElementById("formlogin").setAttribute("hidden", "true");
-                document.getElementById("titulologin").setAttribute("hidden", "true");
                 document.getElementById("welcome").removeAttribute("hidden");
                 document.getElementById("welcome").innerHTML="Bienvenido "+respuesta.name+". Ahora puede reservar locaciones! ";
                 mostrarnavbar();
-                setTimeout(window.location.href = "reserva.html", 120000);
+                setTimeout(function(){window.location.href = "reserva.html"}, 1500);
             }
 
         }
@@ -189,7 +191,7 @@ function validarcliente(NIT){
 }
 
 function guardarcliente(){
-   
+    event.preventDefault();
     validarcliente($("#NIT").val());          
     validarvacio($("#NIT").val(), "Debe ingresar un numero de identificación");
     validarvacio($("#tel").val(), "Debe ingresar un numero de contacto");
@@ -251,10 +253,14 @@ function cambiarimg(src){
     loc.setAttribute("src", src);
 
     var nombreloc = document.getElementById('nombreloc');
-    var nombre = src.replace(".jpg", "").replace(".jpeg", "").replace("img/", "");
-    nombreloc.innerHTML =  src.replace(".jpg", "").replace(".jpeg", "").replace("img/", "");
+    var nombre = src.replace(".jpg", "").replace(".jpeg", "").replace("img/", "").split(" ");
+    for (var i = 0; i < nombre.length; i++) {
+        nombre[i] = nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1);
+    
+    };
+    nombreloc.innerHTML =  nombre.join(" ");
 
-    let myData = nombre;
+    /*let myData = nombre;
     $.ajax({
         url: "http://localhost:8081/location/" + nombre,
         type: "GET",
@@ -271,10 +277,11 @@ function cambiarimg(src){
                 descriploc.innerHTML = "<b>"+respuesta.descriplocacion+"</b>";
             }
         }
-    });
+    });*/
 }
 
 function guardarmsjpqrs(){
+    event.preventDefault();
     validarvacio($("#name").val(), "Debe ingresar un nombre");
     validarvacio($("#email").val(), "Debe ingresar un e-mail");
     validarvacio($("#message").val(), "Por favor ingrese su mensaje");
@@ -375,6 +382,7 @@ function validarfechareserva(fecha, msj_error) {
 
 
 function guardarreserva(){
+    event.preventDefault();
     validarvacio($("#date").val(), "Debe ingresar una fecha para la reserva");
     validarvacio($("#time").val(), "Debe ingresar una hora para la reserva");
     validarvacio($("#guests").val(), "Por favor ingrese un numero de personas");
@@ -529,4 +537,14 @@ function mostrarnavbar(){
 function setfocus(id){
 
     document.getElementById(id).focus();
+}
+
+
+function recuperar_password(email){
+    Swal.fire({
+        icon: 'info',
+        title: "Recuperar Contraseña",
+        text: "Se ha enviado un link para reestablecer la contraseña al correo"+email 
+    });
+    event.preventDefault();
 }

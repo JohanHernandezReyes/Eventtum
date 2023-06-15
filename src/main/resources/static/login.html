@@ -3,6 +3,7 @@
 <head>
     <title>Login</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="./img/logo.png">
     <link type="text/css" href="./css/estilos.css" rel="stylesheet" /> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -10,6 +11,7 @@
     <script type="text/javascript" src="./js/encrypt.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/39f02fa58f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -18,6 +20,7 @@
 </head>
  
 <body onload="setfocus('uemail');">
+    
     <div id="navbar"></div>
     <script>
         $(function(){
@@ -25,39 +28,33 @@
         }
         )
     </script> 
-    <div class="jumbotron" style="background:rgba(172, 177, 29, 0.736);">
-    <div class="container">
-        <img style="height:500px; width: 500px;" src="img/login.png" alt="">
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <div class="container__form">
-            <h2 id="titulologin" style="color:gold"><img class = "logo-login" src="./img/logo.png">Iniciar sesión</h2>
+
+    <section class="box-login">
+        <div class="login">
+            <span class="borderLine"></span>
             <form id="formlogin">
-                <i class="fa-solid fa-user" style="color:white"></i>
-                <label for="uemail">Usuario:</label>
-                <input id="uemail" type="email" placeholder="Ingresa tu usuario (Email)" pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" required focus>
-                <br>
-                <i class="fa-solid fa-lock" style="color:white"></i>
-                <label for="upassword">Contraseña:</label>
-                <input id="upassword" type="password" placeholder="Tu contraseña" minlength="8" maxlength="12"
-                    title="La contraseña debe tener entre 8 y 12 caracteres">
-                <br>    
-                <input class="chek" type="checkbox" id="checkid">
-                <label for="checkid">Recuerdame</label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n&nbsp&nbsp&nbsp&nbsp&nbsp&n
-                <a id="reglink" href="registro.html">Registrese Aquí</a>
-                <input type="button" id="btnlog" class="boton"
-                    onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
+                <img src="img/logo.png" alt="">
+                <div class="inputBox">
+                    <input id="uemail" type="text" required="required">
+                    <span>Nombre de usuario (e-mail)</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="upassword" type="password" pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" required>
+                    <span>Tu Contraseña</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="recuperacion.html">Olvidaste tu contraseña</a>
+                    <a href="registro.html">Registrate</a>
+                </div>
+                <input type="submit" id="btnlog" onclick="Autenticacion($('#uemail').val(), $('#upassword').val())" value="Iniciar sesión">
             </form>
             <h3 style="align-self:center;color: whitesmoke;" id="welcome" hidden="true"></h3>
-        </div>
-    </div>
-    <div class="social-networt">
-        <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    </div> 
-    </div>
+        </div>     
+    </section>
+
+
     <div id="footer"></div>
     <script>
         $(function(){
@@ -65,6 +62,10 @@
         }
         )
     </script>  
+
+    <!--seccion particulas-->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
