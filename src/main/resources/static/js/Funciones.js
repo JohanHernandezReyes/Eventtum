@@ -60,7 +60,7 @@ function idusuario(email, respuesta){
     }
     id = listemails.indexOf(email)+1;
     localStorage.setItem("idnewuser", id);
-    //console.log(localStorage.getItem("idnewuser"));
+    console.log(localStorage.getItem("idnewuser"));
 }
 
 function NuevoUsuario() {
