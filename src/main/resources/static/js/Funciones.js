@@ -22,7 +22,7 @@ function validarconfirm(password, confirm) {
 
 function Validar(email, callbackFunction){
     $.ajax({
-        url: "http://localhost:8081/user/all",
+        url: "http://129.151.117.220:8081/user/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -81,7 +81,7 @@ function NuevoUsuario() {
     };
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://localhost:8081/user/new",
+        url: "http://129.151.117.220:8081/user/new",
         type: "POST",
         data: dataToSend,
         contentType: "application/JSON",
@@ -113,7 +113,7 @@ function ValidarUsuario(email){
     let myData = email;
     validarvacio($("#uemail").val(), "Debe ingresar un e-mail");
     $.ajax({
-        url: "http://localhost:8081/user/" + myData,
+        url: "http://129.151.117.220:8081/user/" + myData,
         type: "GET",
         data: myData,
         contentType: "application/JSON",
@@ -140,7 +140,7 @@ function Autenticacion(email, password) {
     validarvacio($("#uemail").val(), "Debe ingresar un e-mail");
     validarvacio($("#upassword").val(), "Debe ingresar una contraseña valida");
     $.ajax({
-        url: "http://localhost:8081/user/" + email + "/" + hash,
+        url: "http://129.151.117.220:8081/user/" + email + "/" + hash,
         type: "GET",
         data: email + "/" + password,
         contentType: "application/JSON",
@@ -162,7 +162,7 @@ function Autenticacion(email, password) {
                 document.getElementById("welcome").removeAttribute("hidden");
                 document.getElementById("welcome").innerHTML="Bienvenido "+respuesta.name+". Ahora puede reservar locaciones! ";
                 mostrarnavbar();
-                setTimeout(function(){window.location.href = "reserva.html"}, 1500);
+                setTimeout(function(){window.location.href = "reserva.html";location.reload();}, 1500);
             }
 
         }
@@ -173,7 +173,7 @@ function validarcliente(NIT){
     let myData = NIT;
     validarvacio($("#NIT").val(), "Debe ingresar un numero de identificación");
     $.ajax({
-        url: "http://localhost:8081/customer/" + myData,
+        url: "http://129.151.117.220:8081/customer/" + myData,
         type: "GET",
         data: myData,
         contentType: "application/JSON",
@@ -216,7 +216,7 @@ function guardarcliente(){
     let dataToSend = JSON.stringify(myData);
     //console.log(dataToSend);
     $.ajax({
-        url: "http://localhost:8081/customer/new",
+        url: "http://129.151.117.220:8081/customer/new",
         type: "POST",
         data: dataToSend,
         contentType: "application/JSON",
@@ -262,7 +262,7 @@ function cambiarimg(src){
 
     /*let myData = nombre;
     $.ajax({
-        url: "http://localhost:8081/location/" + nombre,
+        url: "http://129.151.117.220:8081/location/" + nombre,
         type: "GET",
         data: myData,
         contentType: "application/JSON",
@@ -326,7 +326,7 @@ function guardarmsjpqrs(){
     let dataToSend = JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url: "http://localhost:8081/pqrs/new",
+        url: "http://129.151.117.220:8081/pqrs/new",
         type: "POST",
         data: dataToSend,
         contentType: "application/JSON",
@@ -345,7 +345,7 @@ function guardarmsjpqrs(){
 
 function MostrarLocaciones(){
     $.ajax({
-        url: "http://localhost:8081/location/all",
+        url: "http://129.151.117.220:8081/location/all",
         type: "GET",
         contentType: "application/JSON",
         datatype: "JSON",
@@ -401,7 +401,7 @@ function guardarreserva(){
     };
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://localhost:8081/reserva/new",
+        url: "http://129.151.117.220:8081/reserva/new",
         type: "POST",
         data: dataToSend,
         contentType: "application/JSON",
@@ -427,7 +427,7 @@ function guardarreserva(){
 
     let dataToSend2 = JSON.stringify(myData2);
     $.ajax({
-        url: "http://localhost:8081/reserva/details/new",
+        url: "http://129.151.117.220:8081/reserva/details/new",
         type: "POST",
         data: dataToSend2,
         contentType: "application/JSON",
@@ -454,7 +454,7 @@ function obtenerdatosusuario(){
 
     let mydata=localStorage.getItem("idusuariologin");
     $.ajax({
-        url: "http://localhost:8081/customer/userid/" + mydata,
+        url: "http://129.151.117.220:8081/customer/userid/" + mydata,
         type: "GET",
         contentType: "application/JSON",
         datatype: "JSON",
@@ -471,7 +471,7 @@ function obtenerdatosusuario(){
 function obteneridpedido(){
     try{
         $.ajax({
-            url: "http://localhost:8081/reserva/all",
+            url: "http://129.151.117.220:8081/reserva/all",
             type: "GET",
             contentType: "application/JSON",
             datatype: "JSON",
