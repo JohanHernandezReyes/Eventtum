@@ -162,7 +162,8 @@ function Autenticacion(email, password) {
                 document.getElementById("welcome").removeAttribute("hidden");
                 document.getElementById("welcome").innerHTML="Bienvenido "+respuesta.name+". Ahora puede reservar locaciones! ";
                 mostrarnavbar();
-                setTimeout(function(){window.location.href = "reserva.html";location.reload();}, 1500);
+                window.location.href = "reserva.html";
+                setTimeout(function(){location.reload();}, 1500);
             }
 
         }
