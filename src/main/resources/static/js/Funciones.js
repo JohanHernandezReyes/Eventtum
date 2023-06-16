@@ -92,10 +92,7 @@ function NuevoUsuario() {
             $("#email").val("");
             $("#password").val("");
             $("#confirm").val("");
-            document.getElementById("formregistro").setAttribute("hidden", "true");
-            document.getElementById("h2registro").setAttribute("hidden", "true");
-            document.getElementById("linkdatoscliente").removeAttribute("hidden");
-            document.getElementById("linksign3").removeAttribute("hidden");
+            window.location.href = "infocliente.html";
         }
     });
     
