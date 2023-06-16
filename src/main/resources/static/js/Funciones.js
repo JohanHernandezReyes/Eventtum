@@ -359,7 +359,6 @@ function MostrarLocaciones(){
             
         }
     });
-    setTimeout(function(){window.location.reload();}, 4000);
 }
 
 function validarfechareserva(fecha, msj_error) {
