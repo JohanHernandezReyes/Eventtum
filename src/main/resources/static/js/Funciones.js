@@ -162,13 +162,12 @@ function Autenticacion(email, password) {
                 document.getElementById("welcome").removeAttribute("hidden");
                 document.getElementById("welcome").innerHTML="Bienvenido "+respuesta.name+". Ahora puede reservar locaciones! ";
                 mostrarnavbar();
-                setTimeout(function(){window.location.href = "reserva.html";}, 1500);
+                setTimeout(function(){window.location.href = "reserva.html";}, 2500);
+                setTimeout(function(){location.reload();}, 1500);
             }
 
         }
     });
-
-    setTimeout(function(){location.reload();}, 1000);
 }
 
 function validarcliente(NIT){
