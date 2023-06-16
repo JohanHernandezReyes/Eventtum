@@ -159,7 +159,7 @@ function Autenticacion(email, password) {
                 document.getElementById("welcome").removeAttribute("hidden");
                 document.getElementById("welcome").innerHTML="Bienvenido "+respuesta.name+". Ahora puede reservar locaciones! ";
                 mostrarnavbar();
-                setTimeout(function(){window.location.href = "locaciones.html";}, 4000);
+                setTimeout(function(){window.location.href = "locaciones.html";}, 5000);
                
             }
 
@@ -208,7 +208,7 @@ function guardarcliente(){
         direccion: $("#direcc").val(),
         fechareg: fecha,
         tblciudad:{idciudad: parseInt($("#ciudad").val())},
-        tblusuarios:{id: parseInt(localStorage.getItem("idnewuser"))},
+        tblusuarios:{idusuario: parseInt(localStorage.getItem("idnewuser"))},
         tbltipoid:{idtipoid: parseInt($("#tipoID").val())}        
     };
     let dataToSend = JSON.stringify(myData);
