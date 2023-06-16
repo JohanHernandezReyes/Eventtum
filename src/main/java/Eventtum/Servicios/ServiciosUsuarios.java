@@ -40,7 +40,7 @@ public class ServiciosUsuarios{
     }
 
     public Usuarios GuardarUser(Usuarios U){
-        if (U.getId()==null){
+        if (U.getIdusuario()==null){
             return UsersRepository.GuardarUsuario(U);
         }else{
             Optional<Usuarios> UserX=UsersRepository.BuscarUsuario(U.getEmail());
