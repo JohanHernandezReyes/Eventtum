@@ -212,7 +212,7 @@ function guardarcliente(){
         tbltipoid:{idtipoid: parseInt($("#tipoID").val())}        
     };
     let dataToSend = JSON.stringify(myData);
-    //console.log(dataToSend);
+    console.log(dataToSend);
     $.ajax({
         url: "http://129.151.117.220:8081/customer/new",
         type: "POST",
