@@ -163,7 +163,7 @@ function Autenticacion(email, password) {
                 document.getElementById("welcome").innerHTML="Bienvenido "+respuesta.name+". Ahora puede reservar locaciones! ";
                 mostrarnavbar();
                 setTimeout(function(){window.location.href = "reserva.html";}, 1500);
-                setTimeout(function(){location.reload();}, 1500);
+                setTimeout(function(){location.reload();}, 2500);
             }
 
         }
