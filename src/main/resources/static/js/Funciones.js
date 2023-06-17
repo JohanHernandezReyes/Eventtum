@@ -152,7 +152,7 @@ function Autenticacion(email, password) {
                     text: "Usuario o clave incorrectos"
                 });
             } else {
-                localStorage.setItem("idusuariologin", respuesta.id);
+                localStorage.setItem("idusuariologin", respuesta.idusuario);
                 localStorage.setItem("nameusuariologin", respuesta.name);
                 localStorage.setItem("emailusuariologin", respuesta.email);
                 document.getElementById("formlogin").setAttribute("hidden", "true");
