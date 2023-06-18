@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import javax.persistence.*;
 import lombok.Data;
-import java.time.*;
 
 @Entity
 @Table(name="tblpedidos_has_tbllocaciones")

@@ -424,6 +424,7 @@ function guardarreserva(){
     };
 
     let dataToSend2 = JSON.stringify(myData2);
+    console.log(dataToSend2);
     $.ajax({
         url: "http://129.151.117.220:8081/reserva/details/new",
         type: "POST",
