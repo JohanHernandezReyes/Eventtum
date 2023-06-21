@@ -484,7 +484,7 @@ function obteneridpedido(){
             }
         });
     }
-    catch{
+    catch(err){
         localStorage.setItem("idpedido", 1);
     }    
 
